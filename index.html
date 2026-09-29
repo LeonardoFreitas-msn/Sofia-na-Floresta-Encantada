@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17131f">
+  <meta name="description" content="Sofia na Floresta Encantada — livro digital">
+  <title>Sofia na Floresta Encantada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="title">
+        <span class="book-icon">📖</span>
+        <span>Sofia na Floresta Encantada</span>
+      </div>
+      <div class="top-actions">
+        <button id="zoomOut" aria-label="Diminuir zoom" title="Diminuir zoom">−</button>
+        <button id="zoomIn" aria-label="Aumentar zoom" title="Aumentar zoom">+</button>
+        <button id="fullscreen" aria-label="Tela cheia" title="Tela cheia">⛶</button>
+      </div>
+    </header>
+
+    <section class="reader" id="reader" aria-label="Leitor do livro">
+      <button class="nav prev" id="prev" aria-label="Página anterior">‹</button>
+
+      <div class="book-area" id="bookArea">
+        <div class="page-shadow"></div>
+        <div class="sheet next-sheet" id="nextSheet">
+          <img id="nextImage" alt="Próxima página">
+        </div>
+        <div class="sheet current-sheet" id="page">
+          <div class="sheet-face front">
+            <img id="pageImage" alt="Página do livro">
+          </div>
+          <div class="sheet-face back">
+            <img id="backImage" alt="Verso da página">
+          </div>
+        </div>
+      </div>
+
+      <button class="nav next" id="next" aria-label="Próxima página">›</button>
+    </section>
+
+    <footer class="controls">
+      <button id="first">⏮</button>
+      <button id="prevBottom">←</button>
+      <span id="counter">1 / 14</span>
+      <button id="nextBottom">→</button>
+      <button id="last">⏭</button>
+    </footer>
+
+    <p class="hint">Use as setas, clique nas laterais ou deslize a página no celular.</p>
+  </main>
+
+  <div class="zoom-layer" id="zoomLayer" aria-hidden="true">
+    <button class="close-zoom" id="closeZoom" aria-label="Fechar zoom">×</button>
+    <img id="zoomImage" alt="Página ampliada">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
